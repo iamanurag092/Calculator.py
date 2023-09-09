@@ -2,23 +2,23 @@ from tkinter import *
 
 first_number=second_number=operator=None
 
-def get_digit(digit):
+def get_digit(digit: int) -> None:
     current = result_label['text']
     new = current + str(digit)
     result_label.config(text=new)
 
-def clear():
+def clear() -> None:
     result_label.config(text='')
 
-def get_operator(op):
+def get_operator(op: str) -> None:
     global first_number,operator
 
     first_number = int(result_label['text'])
     operator = op
     result_label.config(text='')
 
-def get_result():
-    global first_number,second_number,operator
+def get_result() -> None:
+    global first_number, second_number, operator
 
     second_number = int(result_label['text'])
 
